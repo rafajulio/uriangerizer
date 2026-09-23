@@ -65,3 +65,7 @@ in `Uriangerizer\bin\x64\Debug\Uriangerizer.dll`.
   translated again. A rate limit caps what auto mode can send.
 - Anything the rules do not explicitly claim (other channels, `/dance`, plugin commands, macros) is
   passed through to the game untouched.
+
+## License
+
+[MIT](LICENSE).
