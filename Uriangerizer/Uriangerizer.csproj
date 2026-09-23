@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Dalamud.NET.Sdk sets up everything Dalamud-specific: target framework (net10.0-windows for API 15),
+  x64 platform, references to Dalamud.dll / FFXIVClientStructs / ImGui bindings from your local
+  XIVLauncher install (%AppData%\XIVLauncher\addon\Hooks\dev), and DalamudPackager, which turns the
+  manifest fields below into Uriangerizer.json next to the DLL.
+-->
+<Project Sdk="Dalamud.NET.Sdk/15.0.0">
+  <PropertyGroup>
+    <Version>0.1.0.0</Version>
+    <Author>rafael</Author>
+    <Name>Uriangerizer</Name>
+    <Punchline>Speaketh thy words as Urianger would.</Punchline>
+    <Description>Translates Brazilian Portuguese chat messages into archaic, ornate English in the style of Urianger Augurelt, using the Claude API.</Description>
+    <Tags>chat;translation;roleplay</Tags>
+    <!-- Needed for FFXIVClientStructs' native pointers (see Chat/ChatSender.cs). -->
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Anthropic" Version="12.49.0" />
+  </ItemGroup>
+</Project>
